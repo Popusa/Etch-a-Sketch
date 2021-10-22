@@ -3,8 +3,10 @@ const eraser = document.getElementById('Eraser');
 let erasetracker = 1;
 let chosencolor = "#000000";
 function GenerateGridBlocks(squares){
-    for (let i = 0; i < squares; i++){
-        let squareblock = document.createElement('div');
+    let NumOfSquares = squares * squares;
+    for (let i = 0; i < NumOfSquares; i++){
+        let squareblock = document.createElement("div");
+        squareblock.classList.add("grid");
         paper.appendChild(squareblock);
         squareblock.addEventListener('mouseover',ApplyColor(squareblock));
     }
@@ -20,4 +22,4 @@ eraser.addEventListener('click',function(){
 function ApplyColor(square){
     square.style.backgroundColor = chosencolor;
 }
-GenerateGridBlocks(16);
+//GenerateGridBlocks(16);

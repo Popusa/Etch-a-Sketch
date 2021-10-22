@@ -15,9 +15,7 @@ header,footer{
         margin:0;
     }
     .Grid{
-        display:flex;
-        justify-content:center;
-        align-self:center;
+        display:grid;
         padding:128px;
         border-style: solid;
         width:30%;
