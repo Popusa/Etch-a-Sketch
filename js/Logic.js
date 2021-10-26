@@ -1,15 +1,25 @@
 const paper = document.querySelector('.Grid');
-const board = document.createElement('div');
+const board = document.querySelector('.Container');
 const eraser = document.querySelector('#Eraser');
+const editgrid = document.querySelector('#EditGrid');
 let erasetracker = 1;
+let gridsize = 8;
 let chosencolor = "#000000";
 function GenerateGridBlocks(squares){
     let NumOfSquares = squares * squares;
     for (let i = 0; i < NumOfSquares; i++){
         let squareblock = document.createElement('div');
         squareblock.classList.add("grid");
-        board.appendChild(squareblock);
         squareblock.addEventListener('mouseover',ApplyColor(squareblock));
+        board.appendChild(squareblock);
+        squareblock.style.width = `${576 / NumOfSquares}px`;
+        squareblock.style.height = `${192 / NumOfSquares}px`;
+        squareblock.style.backgroundColor = 'black';
+    }
+}
+function ResetGrid(parent){
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
     }
 }
 eraser.addEventListener('click',function(){
@@ -24,8 +34,15 @@ eraser.addEventListener('click',function(){
         console.log("ERASER MODE: OFF");
     }
 });
-function ApplyColor(square){
-    square.style.backgroundColor = chosencolor;
+editgrid.addEventListener('click',function(){
+let newgridsize = prompt("Enter the grid size.");
+while (newgridsize <= 1 || newgridsize > 16)
+    newgridsize = prompt("Enter a valid value.");
+ResetGrid(board);
+GenerateGridBlocks(newgridsize);
+});
+function ApplyColor(squareblock){
+    squareblock.style.backgroundColor = chosencolor;
 }
-GenerateGridBlocks(16);
+GenerateGridBlocks(gridsize);
 paper.appendChild(board);

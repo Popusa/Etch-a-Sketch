@@ -8,7 +8,6 @@ header,footer{
         position:fixed;
         left:0px;
         bottom:0px;
-        height:30px;
         width:100%;
     }
     body{
@@ -16,7 +15,6 @@ header,footer{
     }
     .Grid{
         display:grid;
-        padding:128px;
         border-style: solid;
         width:30%;
         margin-top:100px;
@@ -25,8 +23,13 @@ header,footer{
         border-width: 1em;
         border-color: gray;
     }
+    .Container{
+        display:grid;
+        font-size: 0;
+    }
     .Settings{
         display:flex;
         padding: 16px;
-        justify-content:space-evenly;
+        gap: 16px;
+        justify-content:center;
     }
