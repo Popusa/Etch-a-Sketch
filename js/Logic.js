@@ -3,13 +3,13 @@ const board = document.querySelector('.Container');
 const eraser = document.querySelector('#Eraser');
 const editgrid = document.querySelector('#EditGrid');
 let erasetracker = 1;
-let gridsize = 8;
+let gridsize = 4;
 let chosencolor = "#000000";
 function GenerateGridBlocks(squares){
     let NumOfSquares = squares * squares;
     for (let i = 0; i < NumOfSquares; i++){
         let squareblock = document.createElement('div');
-        squareblock.classList.add("grid");
+        squareblock.classList.add("item");
         squareblock.addEventListener('mouseover',ApplyColor(squareblock));
         board.appendChild(squareblock);
         squareblock.style.width = `${576 / NumOfSquares}px`;
