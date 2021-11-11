@@ -20,10 +20,11 @@ header,footer{
         margin-top:100px;
         border-style: solid;
         border-color: gray;
+        max-width: 50%;
     }
     .msg{
-display:flex;
-justify-content:center;
+        display:flex;
+        justify-content:center;
     }
     .Container{
         width: 576px;

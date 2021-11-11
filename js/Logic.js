@@ -2,9 +2,11 @@ const paper = document.querySelector('.Grid');
 const board = document.querySelector('.Container');
 const eraser = document.querySelector('#Eraser');
 const editgrid = document.querySelector('#EditGrid');
+const EraseCompletely = document.querySelector('#Reset');
 const msg = document.querySelector('.msg');
 let erasetracker = 1;
 let gridsize = 16;
+let limit = 20;
 let chosencolor = "#000000";
 function GenerateGridBlocks(squares){
     let NumOfSquares = squares * squares;
@@ -37,11 +39,15 @@ eraser.addEventListener('click',function(){
         msg.innerText = "ARTISTIC MODE: ON";
     }
 });
+EraseCompletely.addEventListener('click',function(){
+    ResetGrid(board);
+    GenerateGridBlocks(gridsize);
+});
 editgrid.addEventListener('click',function(){
-let newgridsize = prompt("Enter the grid size. Limit is 16");
-while (newgridsize <= 1 || newgridsize > 32)
-    newgridsize = prompt("Enter a valid value. Limit is 16");
+gridsize= prompt("Enter the grid size. Limit is " + limit);
+while (gridsize <= 1 || gridsize > limit)
+gridsize = prompt("Enter a valid value. Limit is " + limit);
 ResetGrid(board);
-GenerateGridBlocks(newgridsize);
+GenerateGridBlocks(gridsize);
 });
 GenerateGridBlocks(gridsize);
