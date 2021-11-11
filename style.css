@@ -21,9 +21,17 @@ header,footer{
         border-style: solid;
         border-color: gray;
     }
+    .msg{
+display:flex;
+justify-content:center;
+    }
     .Container{
-        display: grid;
-        grid-template-columns: auto;
+        width: 576px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Container > *{
+        flex: 1 1 576px;
     }
     .Settings{
         display:flex;
