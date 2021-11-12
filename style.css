@@ -45,6 +45,7 @@ footer{
   height: 100%;
 }
 .Settings {
+  gap: 10px;
   display: flex;
   padding: 16px;
   justify-content: center;
