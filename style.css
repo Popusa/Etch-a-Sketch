@@ -14,17 +14,12 @@ footer {
   padding: 16px;
   text-align: center;
 }
-footer {
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-}
-body {
-  margin: 0;
+footer{
+  padding-bottom: 86px;
 }
 .Grid {
   width: 30%;
+  Height: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
