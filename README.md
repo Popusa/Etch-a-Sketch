@@ -1,5 +1,5 @@
-This is the "Etch-a-Sketch" project that I am currently building as part of The Odin Project cirriculum.
+This is the "Etch-a-Sketch" project that I built as part of The Odin Project cirriculum.
 
-It will be used to further practice on DOM manipulation, adding event listeners, and deeper javascript knowledge and practice.
+It was used to further practice on DOM manipulation, adding event listeners, and deeper javascript knowledge and practice.
 
-Can't wait to keep learning more!
+A very special thanks to "superbia" for helping me fix a very persistent bug in the grid.
